@@ -245,6 +245,7 @@ If a commit reverts a previous commit, the commit type **must** be **revert**, f
     This reverts commit <SHA>.
     ```
 
+
 -   A clear description of the reason for reverting the previous commit.
 
 For example,
