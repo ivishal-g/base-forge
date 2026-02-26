@@ -127,6 +127,47 @@ Full documentation is available at [next-forge.com/docs](https://www.next-forge.
 
 We welcome contributions! See the [contributing guide](https://github.com/vercel/next-forge/blob/main/.github/CONTRIBUTING.md) for details.
 
+### Git Commit Messages
+
+This project follows a strict commit message format based on [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/). All commits must follow this format:
+
+```
+<type>(<scope>): <short summary>
+
+<body>
+
+<footer>
+```
+
+#### Types
+
+- **feat**: New feature
+- **fix**: Bug fix
+- **docs**: Documentation changes
+- **style**: Code style changes (formatting, etc)
+- **refactor**: Code refactoring
+- **perf**: Performance improvements
+- **test**: Adding or updating tests
+- **chore**: Maintenance tasks, dependency updates
+- **build**: Build system changes
+- **ci**: CI configuration changes
+- **revert**: Revert previous commit
+- **bench**: Benchmark changes
+- **deprecate**: Deprecate feature
+- **remove**: Remove feature
+- **temp**: Temporary/experimental changes
+
+#### Examples
+
+```
+feat(auth): add clerk authentication integration
+fix(api): resolve database connection timeout
+docs(readme): update installation instructions
+chore(deps): update next.js to v16
+```
+
+For detailed guidelines, see the [Git Commit Messages guide](https://github.com/ivishal-g/base-forge/blob/main/etc/commitlint/docs/COMMIT_GUIDE.md).
+
 ## Contributors
 
 <a href="https://github.com/vercel/next-forge/graphs/contributors">
