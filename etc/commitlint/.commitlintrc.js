@@ -1,5 +1,9 @@
 
-var config = {};
+import parserPreset from './parser-preset/index.js';
+import rules from './rules/index.js';
+import prompt from './prompt/index.js';
+
+const config = {};
 
 /**
 * Link to commit guidance.
@@ -17,7 +21,7 @@ config[ 'helpUrl' ] = 'https://github.com/ivishal-g/base-forge/blob/main/etc/com
 * @memberof config
 * @type {Object}
 */
-config[ 'parserPreset' ] = require( './parser-preset' );
+config[ 'parserPreset' ] = parserPreset;
 
 /**
 * Lint rules.
@@ -26,7 +30,7 @@ config[ 'parserPreset' ] = require( './parser-preset' );
 * @memberof config
 * @type {Object}
 */
-config[ 'rules' ] = require( './rules' );
+config[ 'rules' ] = rules;
 
 /**
 * Prompt configuration.
@@ -35,6 +39,6 @@ config[ 'rules' ] = require( './rules' );
 * @memberof config
 * @type {Object}
 */
-config[ 'prompt' ] = require( './prompt' );
+config[ 'prompt' ] = prompt;
 
-module.exports = config;
+export default config;

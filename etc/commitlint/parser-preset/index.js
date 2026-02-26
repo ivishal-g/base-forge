@@ -1,4 +1,4 @@
-var config = require( 'conventional-changelog-conventionalcommits' );
+import config from 'conventional-changelog-conventionalcommits';
 
 var conf = config({
 	// Define an array of prefixes used to detect references to issues:
@@ -11,4 +11,4 @@ var conf = config({
 	'revertPattern': /^Revert\s([\s\S]*)\s*This reverts commit (\w*)\./
 });
 
-module.exports = conf;
+export default conf;

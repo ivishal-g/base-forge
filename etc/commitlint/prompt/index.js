@@ -169,4 +169,4 @@ config.questions[ 'issues' ] = {
 
 // EXPORTS //
 
-module.exports = config;
+export default config;

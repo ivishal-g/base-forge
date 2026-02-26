@@ -1,5 +1,5 @@
 
-var rules = {};
+const rules = {};
 
 /**
 * Allow the commit message body to end with a full stop.
@@ -339,4 +339,4 @@ rules[ 'trailer-exists' ] = [ 0, 'always', 'Signed-off-by:' ];
 
 // EXPORTS //
 
-module.exports = rules;
+export default rules;
