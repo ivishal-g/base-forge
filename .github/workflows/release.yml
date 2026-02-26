@@ -45,8 +45,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Build CLI
-        run: npx tsup
+      - name: Build all packages
+        run: pnpm build
 
       - name: Create Release
         env:
