@@ -179,3 +179,4 @@ Made with [contrib.rocks](https://contrib.rocks).
 ## License
 
 MIT
+# Commitlint Setup Complete
