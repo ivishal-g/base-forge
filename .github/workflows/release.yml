@@ -11,6 +11,9 @@ jobs:
   release:
     # The operating system it will run on
     runs-on: ubuntu-latest
+    # Environment variables
+    env:
+      BASEHUB_TOKEN: ${{ secrets.BASEHUB_TOKEN }}
     # This check needs to be in place to prevent a publish loop with auto and github actions
     if: "!contains(github.event.head_commit.message, 'ci skip') && !contains(github.event.head_commit.message, 'skip ci')"
     # The list of steps that the action will go through
@@ -50,14 +53,6 @@ jobs:
 
       - name: Create Release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          # Get the latest tag
-          TAG=$(git describe --tags --abbrev=0)
-          echo "Creating release for tag: $TAG"
-          
-          # Create GitHub release
-          gh release create "$TAG" \
-            --title "Release $TAG" \
-            --notes "Automated release for $TAG" \
-            --latest || echo "Release already exists"
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npx auto shipit
