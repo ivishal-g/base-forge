@@ -50,6 +50,14 @@ jobs:
 
       - name: Create Release
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npx auto shipit
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Get the latest tag
+          TAG=$(git describe --tags --abbrev=0)
+          echo "Creating release for tag: $TAG"
+          
+          # Create GitHub release
+          gh release create "$TAG" \
+            --title "Release $TAG" \
+            --notes "Automated release for $TAG" \
+            --latest || echo "Release already exists"
