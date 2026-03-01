@@ -34,7 +34,7 @@
     "@types/node": "^24.10.1",
     "commitizen": "^4.3.0",
     "tsup": "^8.5.1",
-    "turbo": "^2.6.3",
+    "turbo": "^2.8.11",
     "typescript": "^5.9.3",
     "ultracite": "6.3.9",
     "vitest": "^4.0.15"
